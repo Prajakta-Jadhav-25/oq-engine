@@ -191,7 +191,7 @@ class AkkarBommer2010(GMPE):
 
         # Convert units to g,
         # but only for PGA and SA (not PGV):
-        if imt.name in 'PGA SA':
+        if imt.string.startswith(('SA', 'PGA')):
             mean = np.log((10.0 ** (imean - 2.0)) / g)
         else:
             # PGV:

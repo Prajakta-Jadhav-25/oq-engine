@@ -56,7 +56,7 @@ def _compute_mean(clsname, sof, adjustment_factor, C, rup, dists, sites, imt):
                 clsname, sof, C, sites.vs30))
     # convert from cm/s**2 to g for SA and from cm/s**2 to g for PGA (PGV
     # is already in cm/s) and also convert from base 10 to base e.
-    if imt.name == "PGA":
+    if imt.string == "PGA":
         mean = np.log((10 ** mean) * ((2 * np.pi / 0.01) ** 2) *
                       1e-2 / g)
     elif imt.name == "SA":

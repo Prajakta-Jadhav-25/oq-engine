@@ -350,7 +350,7 @@ def _get_vs30star(vs30, imt):
             v1 = np.exp(-0.35 * np.log(t / 0.5) + np.log(1500.))
         else:
             v1 = 800.0
-    elif imt.name == "PGA":
+    elif imt.string == "PGA":
         v1 = 1500.0
     else:
         # This covers the PGV case

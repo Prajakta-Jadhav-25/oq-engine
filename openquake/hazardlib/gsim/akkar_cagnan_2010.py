@@ -168,7 +168,7 @@ class AkkarCagnan2010(BooreAtkinson2008):
 
         # compute full mean value by adding site amplification terms
         # (but avoiding recomputing mean on rock for PGA)
-        if imt.name == "PGA":
+        if imt.string == "PGA":
             mean = (np.log(pga4nl) +
                     _get_site_amplification_linear(sites.vs30, C_SR) +
                     _get_site_amplification_non_linear(sites.vs30, pga4nl,
